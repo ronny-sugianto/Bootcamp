@@ -1,0 +1,49 @@
+name: simat
+description: A new special application for sinarmas mining
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  audioplayers:
+  intl: ^0.16.0
+  bloc: ^3.0.0
+  flutter_bloc: ^3.2.0
+  flutter_secure_storage: ^3.3.1+1
+  firebase_auth: ^0.15.5+3
+  google_sign_in: ^4.3.0
+  dio: ^3.0.9
+  uuid: ^2.0.4
+  path: ^1.6.4
+  dbcrypt: ^1.0.0
+  sqflite:
+  fluttertoast: ^4.0.0
+  qrscan:
+    git:
+      url: https://github.com/ronny-sugianto/qrcode_scanner.git
+  flutter_socket_io:
+  json_annotation: ^3.0.1
+
+  url_launcher: ^5.4.2
+  cached_network_image: ^2.1.0+1
+  cupertino_icons: ^0.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner:
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+   - assets/images/
+   - assets/icons/
+   - assets/audio/

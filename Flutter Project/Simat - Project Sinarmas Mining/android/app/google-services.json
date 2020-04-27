@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "382983760758",
+    "firebase_url": "https://p-smm-id.firebaseio.com",
+    "project_id": "p-smm-id",
+    "storage_bucket": "p-smm-id.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382983760758:android:d1f400bf40850a2d24a857",
+        "android_client_info": {
+          "package_name": "com.sinarmasmining.simat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382983760758-d6prrn30buv467n93bdrd2qkiqun9r7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sinarmasmining.simat",
+            "certificate_hash": "47e8fbbd0acea9e5b8517204ed6757e261d3515d"
+          }
+        },
+        {
+          "client_id": "382983760758-ns3s0adbs8gtc9ek6v6gq453ohutl8ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj33gVKU1cZTp-wvTHpCtar0hrZxH065c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382983760758-ns3s0adbs8gtc9ek6v6gq453ohutl8ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
