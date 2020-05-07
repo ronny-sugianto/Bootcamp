@@ -1,0 +1,57 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"os"
+)
+
+
+type Product struct {
+	ID string	`json: "id"`
+	Name string `json: "name"`
+	Qty int 	`json:"qty"'`
+}
+
+var (database = make(map[string]Product))
+
+func SetJSONResponse(res http.ResponseWriter, message []byte,statusCode int) {
+	res.Header().Set("Content-type","application/json")
+	res.WriteHeader(statusCode)
+	res.Write(message)
+
+}
+func main() {
+
+	//init db
+	database["001"] = Product{ID: "001",Name: "Odol",Qty: 3000}
+	database["002"] = Product{ID: "002",Name: "Mie Oyeng",Qty: 8000}
+
+
+	http.HandleFunc("/",func(res http.ResponseWriter, req *http.Request){
+	message := []byte(`{"message":"OK"}`)
+	SetJSONResponse(res,message,http.StatusOK)
+	})
+
+
+	http.HandleFunc("/product",func(res http.ResponseWriter,req *http.Request){
+		var products []Product
+		for _,product := range database {
+			products = append(products,product)
+		}
+		productJSON,err := json.Marshal(&products)
+		if err != nil {
+			message := []byte(`{"messsage":"INVALID"}`)
+			SetJSONResponse(res,message,http.StatusMethodNotAllowed)
+			return
+		}
+		SetJSONResponse(res,productJSON,http.StatusOK)
+	})
+
+	err := http.ListenAndServe(":8000",nil)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
+}

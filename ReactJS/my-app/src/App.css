@@ -1,9 +1,19 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+  height: 100vh;
+  
+}
+.auth-center {
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
-  height: 100px;
+  height: 50px;
+
   pointer-events: none;
 }
 
@@ -13,19 +23,51 @@
   }
 }
 
+.text-info{
+  font-weight: bolder;
+  font-size: 16px;
+}
+.text-title{
+  text-decoration: underline;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.space-bottom{
+  margin-bottom: 20px;
+} 
+
 .App-header {
   background-color: #282c34;
-  min-height: 20vh;
+  padding: 10px;
+  min-height: 2.5vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+.App-menu {
+  font-size: 28pt;
+  margin-right: 18px;
+  opacity: 0.6;
+  transition: 0.3s;
+  
+}
+.App-menu:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.auth-layout {
+
+  border: 0.5px solid #282c3467;
+  border-radius: 10px;
+  width: 800px;
+  height: 300px;
+  
 }
 
 @keyframes App-logo-spin {
